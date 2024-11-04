@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import AuthForm from './components/AuthForm';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
-import { motion } from 'framer-motion';
 import Logo from './components/Logo';
 
 export default function Home() {

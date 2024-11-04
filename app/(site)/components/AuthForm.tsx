@@ -3,7 +3,7 @@
 import React, { useCallback, useState } from 'react';
 import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
 import Input from '@/app/ui/inputs/Input';
-import Button from '@/app/ui/Button';
+import { Button } from '@nextui-org/button';
 import AuthSocialButton from './AuthSocialButton';
 import { BsGithub, BsGoogle } from 'react-icons/bs';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -98,7 +98,13 @@ const AuthForm = () => {
             disabled={isLoading}
           />
           <div>
-            <Button disabled={isLoading} fullWidth type="submit">
+            <Button
+              isDisabled={isLoading}
+              color="secondary"
+              fullWidth
+              type="submit"
+              radius="sm"
+            >
               {variant === 'LOGIN' ? 'Sign in' : 'Register'}
             </Button>
           </div>
